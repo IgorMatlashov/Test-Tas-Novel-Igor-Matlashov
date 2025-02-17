@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cf156e46-cc6e-4665-a7c4-970ecb9587b4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Test Task Novel Igor Matlashov/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Test Task Novel Igor Matlashov/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/Aldrich-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/Aldrich-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/CIND SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/CIND SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/LaborUnion-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/LaborUnion-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Naninovel/Scripts/Location1.nani" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Naninovel/Scripts/Location1.nani" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Naninovel/Scripts/Location2.nani" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Naninovel/Scripts/Location2.nani" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +115,7 @@
       <workItem from="1739734391353" duration="16501000" />
       <workItem from="1739780491566" duration="23597000" />
       <workItem from="1739813715670" duration="455000" />
-      <workItem from="1739814910549" duration="127000" />
+      <workItem from="1739814910549" duration="663000" />
     </task>
     <servers />
   </component>

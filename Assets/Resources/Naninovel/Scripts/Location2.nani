@@ -40,8 +40,13 @@ Quest Updated
 @stop
 
 # AfterMiniGame
-@show Kiara
+@char Kiara.Normal
 Kiara: I said go find artifact!
+
+@hide Kiara
+@hidePrinter
+@showUI GlobalMapBtn
+@stop
 
 # PlayerHasArtifact
 PlayerName: Nobody is here.
@@ -49,4 +54,5 @@ PlayerName: Maybe they are at Location 1.
 
 @hidePrinter
 @showUI GlobalMapBtn
+@stop
 
