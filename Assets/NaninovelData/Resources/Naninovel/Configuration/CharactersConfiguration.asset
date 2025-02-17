@@ -47,7 +47,7 @@ MonoBehaviour:
       width: 1
       height: 1
     BakedLookDirection: 1
-    DisplayName: 
+    DisplayName: '{PlayerName}'
     UseCharacterColor: 0
     NameColor: {r: 1, g: 1, b: 1, a: 1}
     MessageColor: {r: 1, g: 1, b: 1, a: 1}
