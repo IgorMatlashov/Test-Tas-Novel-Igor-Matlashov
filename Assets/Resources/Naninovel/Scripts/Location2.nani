@@ -1,0 +1,52 @@
+@back id:Location2
+
+@if hasArtifact==true
+@goto .PlayerHasArtifact
+@else 
+@if cardGameComplete==true
+@goto .AfterMiniGame
+@else
+@goto .Start
+
+
+# Start
+@char Kiara
+Kiara: Hi {PlayerName}. I have task for you.
+Kiara: You need to find an artifact.
+Kiara: But firstly you have to solve my puzzle.
+Kiara: You have to flip all cards.
+Kiara: You can flip only 2. If they are not same they will flip back again
+
+@set quest="Solve Quest"
+Quest Updated
+
+@hide Kiara
+@hidePrinter
+@startMiniGame
+
+@hideUI QuestUI
+
+@show Kiara
+Kiara: Attaboy.
+Kiara: Now I go to Location 3 and You have to find the artifact.
+Kiara: It looks like a stick.
+
+@set quest="Find artifact"
+@showUI QuestUI
+Quest Updated
+
+@hide Kiara
+@showUI GlobalMapBtn
+@stop
+
+# AfterMiniGame
+@show Kiara
+Kiara: I said go find artifact!
+
+# PlayerHasArtifact
+PlayerName: Nobody is here.
+PlayerName: Maybe they are at Location 1.
+
+@hidePrinter
+@showUI GlobalMapBtn
+

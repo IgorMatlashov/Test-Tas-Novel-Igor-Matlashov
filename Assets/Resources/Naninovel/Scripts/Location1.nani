@@ -1,0 +1,68 @@
+@back  id:Location1
+
+@if hasArtifact==true
+@goto .GotArtifact
+@else
+@if cardGameComplete==true
+@goto .AfterMiniGame
+@else
+@if playerGotQuest==true
+@goto .AfterMiniGame
+@else
+@set playerGotQuest=true
+@goto .Start
+
+# Start
+
+@char Lana
+Lana: Hey {PlayerName}. I have heard that Lana invited you to her place.
+Lana: You should visit her.
+
+@set "quest=\"Talk to Kiara\""
+
+@showUI QuestUI
+@hide Lana
+You have new quest
+Go to Location 2
+@showUI GlobalMapBtn
+@stop
+
+# AfterMiniGame
+@char Lana
+Lana: Did you find artifact? Then go find it.
+
+@hide Lana
+@showUI GlobalMapBtn
+@stop
+
+# GotArtifact
+@char Kiara pos:70
+@char Lana pos:30
+
+Choose who will have the artifact
+
+@choice "Give to Lana" handler:MyButtonList goto:.Lana
+@choice "Give to Kiara" handler:MyButtonList goto:.Kiara
+@choice "Keep for yourself" handler:MyButtonList goto:.Yourself
+@stop
+
+# Lana
+@char Kiara.Sad pos:70
+@char Lana.Happy pos:30
+
+Lana: Thank you so much <3
+@stop
+
+# Kiara
+@char Kiara.Happy pos:70
+@char Lana.Sad pos:30
+
+Kiara: Thank you so much <3
+@stop
+
+# Yourself
+@char Kiara.Sad pos:70
+@char Lana.Sad pos:30
+
+PlayerName: I made them sad. But I have artifact.
+@stop

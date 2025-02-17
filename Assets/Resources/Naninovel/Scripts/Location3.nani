@@ -1,0 +1,27 @@
+@back  id:Location3
+
+@if cardGameComplete==true
+@goto .CardGameIsComplete
+@else
+@goto .CardGameIsNotComplete
+@endif
+
+# CardGameIsNotComplete
+You dont know what to looking for. Go to Location 2
+@showUI GlobalMapBtn
+@stop
+
+# CardGameIsComplete
+
+@showUI Artifact
+@choice "Pick the stick" handler:MyButtonList
+@stop
+
+@hideUI Artifact
+
+@set "quest=\"Find Lana and Kiara\""
+Quest Updated
+@set hasArtifact=true
+@showUI GlobalMapBtn
+
+@stop

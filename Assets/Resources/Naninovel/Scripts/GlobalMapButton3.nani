@@ -1,0 +1,9 @@
+@if currentLocation==3
+    You are already at Location 3
+    @stop
+@else
+    @hidePrinter
+    @set currentLocation=3
+    @hideUI GlobalMapUI
+    @goto Location3
+@endif

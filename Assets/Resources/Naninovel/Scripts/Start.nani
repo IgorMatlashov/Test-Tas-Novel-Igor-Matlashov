@@ -1,0 +1,8 @@
+@back id:ChooseName
+
+@input PlayerName summary:"Enter your name"
+@stop
+
+@set currentLocation=1
+
+@goto Location1
