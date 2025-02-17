@@ -36,8 +36,8 @@ Lana: Did you find artifact? Then go find it.
 @stop
 
 # GotArtifact
-@char Kiara pos:70
-@char Lana pos:30
+@char Kiara.Normal pos:70
+@char Lana.Normal pos:30
 
 Choose who will have the artifact
 
