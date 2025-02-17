@@ -51,6 +51,7 @@ Choose who will have the artifact
 @char Lana.Happy pos:30
 
 Lana: Thank you so much <3
+@set quest="Quest Complete
 @stop
 
 # Kiara
@@ -58,6 +59,7 @@ Lana: Thank you so much <3
 @char Lana.Sad pos:30
 
 Kiara: Thank you so much <3
+@set quest="Quest Complete
 @stop
 
 # Yourself
@@ -65,4 +67,5 @@ Kiara: Thank you so much <3
 @char Lana.Sad pos:30
 
 PlayerName: I made them sad. But I have artifact.
+@set quest="Quest Complete
 @stop

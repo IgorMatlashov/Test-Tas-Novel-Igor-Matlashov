@@ -52,6 +52,8 @@ Kiara: I said go find artifact!
 PlayerName: Nobody is here.
 PlayerName: Maybe they are at Location 1.
 
+@set quest="Find Kiara"
+
 @hidePrinter
 @showUI GlobalMapBtn
 @stop
