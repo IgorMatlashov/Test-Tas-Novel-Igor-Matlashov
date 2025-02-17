@@ -10,7 +10,7 @@
 
 
 # Start
-@char Kiara
+@char Kiara.Normal
 Kiara: Hi {PlayerName}. I have task for you.
 Kiara: You need to find an artifact.
 Kiara: But firstly you have to solve my puzzle.

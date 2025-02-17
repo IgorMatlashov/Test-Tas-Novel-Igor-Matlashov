@@ -14,7 +14,7 @@
 
 # Start
 
-@char Lana
+@char Lana.Normal
 Lana: Hey {PlayerName}. I have heard that Lana invited you to her place.
 Lana: You should visit her.
 
@@ -28,7 +28,7 @@ Go to Location 2
 @stop
 
 # AfterMiniGame
-@char Lana
+@char Lana.Normal
 Lana: Did you find artifact? Then go find it.
 
 @hide Lana
