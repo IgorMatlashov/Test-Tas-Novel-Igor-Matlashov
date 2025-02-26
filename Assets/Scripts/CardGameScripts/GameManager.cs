@@ -1,10 +1,11 @@
 using System.Collections;
+using System.Linq;
 using Naninovel;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
+    public static GameManager Instance;
     private bool isGameStarted = false;
 
     public float durationFlip;
@@ -23,9 +24,9 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
         }
         else
         {
@@ -38,36 +39,22 @@ public class GameManager : MonoBehaviour
         if (!isGameStarted)
         {
             GenerateCards();
+            isGameStarted = true;
         }
         
     }
 
     void GenerateCards()
     {
-        isGameStarted = true;
         int totalCards = cardDataArray.Length * repetitions;
         
-        CardData[] tempCardData = new CardData[totalCards];
-        
-        int index = 0;
-        
-        for (int i = 0; i < cardDataArray.Length; i++)
-        {
-            for (int j = 0; j < repetitions; j++)
-            {
-                tempCardData[index] = cardDataArray[i];
-                index++;
-            }
-        }
-        
-        for (int i = 0; i < tempCardData.Length; i++)
-        {
-            int randomIndex = Random.Range(i, tempCardData.Length);
-            (tempCardData[i], tempCardData[randomIndex]) = (tempCardData[randomIndex], tempCardData[i]);
-        }
-        
-        
         tableCards = new Card[totalCards];
+        
+        CardData[] tempCardData = cardDataArray
+            .SelectMany(cardData => Enumerable.Repeat(cardData, repetitions))
+            .OrderBy(_ => Random.value)
+            .ToArray();
+        
         for (int i = 0; i < totalCards; i++)
         {
             Card card = Instantiate(cardPrefabs, gameObject.transform);
@@ -103,7 +90,7 @@ public class GameManager : MonoBehaviour
         {
             firstCard.Flip();
             secondCard.Flip();
-            yield return new WaitForSeconds(GameManager.instance.durationFlip);
+            yield return new WaitForSeconds(GameManager.Instance.durationFlip);
         }
 
         firstCard = null;

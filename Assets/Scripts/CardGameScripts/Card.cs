@@ -25,10 +25,10 @@ public class Card : MonoBehaviour
 
     private void OnCardClick()
     {
-        if (!isFlipped && !isMatched && GameManager.instance.CanFlip())
+        if (!isFlipped && !isMatched && GameManager.Instance.CanFlip())
         {
             Flip();
-            GameManager.instance.CardFlipped(this);
+            GameManager.Instance.CardFlipped(this);
         }
     }
 
@@ -36,7 +36,7 @@ public class Card : MonoBehaviour
     {
         isFlipped = !isFlipped;
         float targetAngle = isFlipped ? 180f : 0f;
-        StartCoroutine(RotateCoroutine(targetAngle, GameManager.instance.durationFlip));
+        StartCoroutine(RotateCoroutine(targetAngle, GameManager.Instance.durationFlip));
     }
 
     public void SetMatched()
